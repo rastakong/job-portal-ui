@@ -218,13 +218,31 @@ const Footer = () => {
                   </div>
                 </div>
               </div>
-              <Link
-                to="/contact"
-                className="group relative hover:text-white transition-colors duration-300"
-              >
-                <span className="relative z-10">Contact Us</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-2"></div>
-              </Link>
+              <div className="group/contact relative">
+                <Link
+                  to="/contact"
+                  aria-describedby="contact-us-tooltip"
+                  className="group relative hover:text-white transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 rounded-lg"
+                >
+                  <span className="relative z-10">Contact Us</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-2"></div>
+                </Link>
+                <div
+                  id="contact-us-tooltip"
+                  role="tooltip"
+                  className="pointer-events-none absolute bottom-full left-1/2 z-20 mb-3 w-64 -translate-x-1/2 translate-y-1 opacity-0 invisible transition-all duration-300 group-hover/contact:translate-y-0 group-hover/contact:opacity-100 group-hover/contact:visible group-focus-within/contact:translate-y-0 group-focus-within/contact:opacity-100 group-focus-within/contact:visible"
+                >
+                  <div className="relative rounded-xl border border-gray-700 bg-gray-800/95 backdrop-blur-sm p-4 text-xs leading-relaxed text-gray-300 shadow-2xl shadow-black/40">
+                    <p className="mb-1 font-semibold text-white">Contact Us</p>
+                    <p>
+                      Open a short form to send our support team a message
+                      about any issue or question you have — we'll follow up
+                      by email.
+                    </p>
+                    <div className="absolute left-1/2 top-full -mt-1 h-3 w-3 -translate-x-1/2 rotate-45 border-b border-r border-gray-700 bg-gray-800/95"></div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div className="text-center md:text-right">
               <div className="text-gray-400 text-sm mb-2">
