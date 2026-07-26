@@ -141,10 +141,31 @@ const Footer = () => {
 
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex flex-wrap justify-center md:justify-start gap-6 text-sm text-gray-400 mb-6 md:mb-0">
-              <a className="group relative hover:text-white transition-colors duration-300">
-                <span className="relative z-10">Privacy Policy</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-2"></div>
-              </a>
+              <div className="group/privacy relative">
+                <button
+                  type="button"
+                  aria-describedby="privacy-policy-tooltip"
+                  className="group relative hover:text-white transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 rounded-lg"
+                >
+                  <span className="relative z-10">Privacy Policy</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-2"></div>
+                </button>
+                <div
+                  id="privacy-policy-tooltip"
+                  role="tooltip"
+                  className="pointer-events-none absolute bottom-full left-1/2 z-20 mb-3 w-64 -translate-x-1/2 translate-y-1 opacity-0 invisible transition-all duration-300 group-hover/privacy:translate-y-0 group-hover/privacy:opacity-100 group-hover/privacy:visible group-focus-within/privacy:translate-y-0 group-focus-within/privacy:opacity-100 group-focus-within/privacy:visible"
+                >
+                  <div className="relative rounded-xl border border-gray-700 bg-gray-800/95 backdrop-blur-sm p-4 text-xs leading-relaxed text-gray-300 shadow-2xl shadow-black/40">
+                    <p className="mb-1 font-semibold text-white">Privacy Policy</p>
+                    <p>
+                      We collect only the information needed to power your
+                      job search and applications, never sell your data, and
+                      let you request access or deletion at any time.
+                    </p>
+                    <div className="absolute left-1/2 top-full -mt-1 h-3 w-3 -translate-x-1/2 rotate-45 border-b border-r border-gray-700 bg-gray-800/95"></div>
+                  </div>
+                </div>
+              </div>
               <a className="group relative hover:text-white transition-colors duration-300">
                 <span className="relative z-10">Terms of Service</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-2"></div>
